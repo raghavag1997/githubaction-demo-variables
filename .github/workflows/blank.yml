@@ -3,19 +3,19 @@ on: push
 jobs: 
   DevJob:
     runs-on: ubuntu-latest
-    environment: ${{ vars.Dev }}
+    environment: Dev
     steps:
     - name: Printing name
-      run: echo $NAME
+      run: echo "My Variable value is ${{ vars.name }}"
   QAJob:
     runs-on: ubuntu-latest
     environment: Qa
     steps:
     - name: Printing name
-      run: echo $NAME
+      run: echo "My Variable value is ${{ vars.name }}"
   StgeJob:
     runs-on: ubuntu-latest
     environment: Stage
     steps:
     - name: Printing name
-      run: echo $NAME
+      run: echo "My Variable value is ${{ vars.name }}"
