@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Printing name
       run: echo "My Variable value is ${{ vars.name }}"
+    - name: Printing Secret 
+      run: echo "${{ secrets.apipass }}"
   QAJob:
     runs-on: ubuntu-latest
     environment: Qa
