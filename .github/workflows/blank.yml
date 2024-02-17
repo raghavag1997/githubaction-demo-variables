@@ -1,5 +1,7 @@
 name: MyWorkflow
 on: push
+env:
+ test: ${{ vars.name }}
 jobs: 
   DevJob:
     runs-on: ubuntu-latest
@@ -9,6 +11,8 @@ jobs:
       run: echo "My Variable value is ${{ vars.name }}"
     - name: Printing Secret 
       run: echo "${{ secrets.apipass }}"
+    - name: Printing Env variables
+      run: echo "${{ env.test }}"
   QAJob:
     runs-on: ubuntu-latest
     environment: Qa
