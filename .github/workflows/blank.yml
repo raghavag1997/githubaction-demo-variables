@@ -3,7 +3,7 @@ on: push
 jobs: 
   DevJob:
     runs-on: ubuntu-latest
-    environment: Dev
+    environment: ${{ vars.Dev }}
     steps:
     - name: Printing name
       run: echo $NAME
