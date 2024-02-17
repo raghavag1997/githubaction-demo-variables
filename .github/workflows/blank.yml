@@ -19,9 +19,13 @@ jobs:
     steps:
     - name: Printing name
       run: echo "My Variable value is ${{ vars.name }}"
+    - name: Printing Env variables
+      run: echo "${{ env.test }}"
   StgeJob:
     runs-on: ubuntu-latest
     environment: Stage
     steps:
     - name: Printing name
       run: echo "My Variable value is ${{ vars.name }}"
+    - name: Printing Env variables
+      run: echo "${{ env.test }}"
