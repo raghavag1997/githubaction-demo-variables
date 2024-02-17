@@ -1,0 +1,21 @@
+name: MyWorkflow
+on: push
+jobs: 
+  DevJob:
+    runs-on: ubuntu-latest
+    environment: Dev
+    steps:
+    - name: Printing name
+      run: echo $NAME
+  QAJob:
+    runs-on: ubuntu-latest
+    environment: Qa
+    steps:
+    - name: Printing name
+      run: echo $NAME
+  StgeJob:
+    runs-on: ubuntu-latest
+    environment: Stage
+    steps:
+    - name: Printing name
+      run: echo $NAME
